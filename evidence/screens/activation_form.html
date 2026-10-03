@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a0f0f;
+      font-family: 'Noto Serif SC', 'Songti SC', serif;
+      color: #f0e6d8;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 开屏容器 */
+    .splash-screen {
+      position: fixed;
+      inset: 0;
+      background: #1a0f0f;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      overflow: hidden;
+    }
+    .splash-screen.fade-out {
+      opacity: 0;
+      transform: translate(10%, -10%) scale(1.1);
+      pointer-events: none;
+    }
+
+    /* 初始光晕 */
+    .opening-glow {
+      width: 4px; height: 4px;
+      background: #d4a373;
+      border-radius: 50%;
+      box-shadow: 0 0 20px #d4a373, 0 0 60px #d4a373;
+      animation: glowExpand 1.5s ease-out forwards;
+    }
+    @keyframes glowExpand {
+      0% { transform: scale(1); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: scale(80); opacity: 0.05; }
+    }
+
+    /* 视频/背景模拟：城市夜景下降感 */
+    .city-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(26,15,15,0.4), rgba(26,15,15,0.4)), url('https://cdn.nuvva.ai/public/assets/crimson_club_city_night.jpg') center/cover no-repeat;
+      opacity: 0;
+      animation: cityFadeIn 4s ease-out 1.5s forwards, cityZoom 10s linear infinite;
+    }
+    @keyframes cityFadeIn { to { opacity: 0.6; } }
+    @keyframes cityZoom { from { transform: scale(1); } to { transform: scale(1.1); } }
+
+    /* 会所大门推开效果 */
+    .door-light {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: 0; height: 200vh;
+      background: linear-gradient(90deg, transparent, rgba(232,201,155,0.3), transparent);
+      transform: translate(-50%, -50%) rotate(15deg);
+      animation: doorOpen 1.2s ease-out 4s forwards;
+      pointer-events: none;
+      z-index: 10;
+    }
+    @keyframes doorOpen {
+      0% { width: 0; opacity: 0; }
+      50% { opacity: 1; }
+      100% { width: 200vw; opacity: 0; }
+    }
+
+    /* 化妆间文字引导 */
+    .mirror-msg {
+      position: absolute;
+      font-family: 'Dancing Script', cursive;
+      font-size: 24px;
+      color: #d4a373;
+      opacity: 0;
+      text-shadow: 0 0 10px rgba(212,163,115,0.5);
+      animation: scriptIn 2s ease-out 5.5s forwards;
+    }
+    @keyframes scriptIn {
+      from { opacity: 0; transform: translateY(10px); letter-spacing: 4px; }
+      to { opacity: 1; transform: translateY(0); letter-spacing: 2px; }
+    }
+
+    /* 封面内容 */
+    .cover-content {
+      opacity: 0;
+      text-align: center;
+      z-index: 20;
+      animation: coverFadeIn 1.5s ease-out 7s forwards;
+    }
+    @keyframes coverFadeIn { to { opacity: 1; } }
+
+    .title-breathe {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      color: #d4a373;
+      letter-spacing: 12px;
+      margin-bottom: 8px;
+      animation: roseGoldBreathe 3s ease-in-out infinite;
+    }
+    @keyframes roseGoldBreathe {
+      0%, 100% { text-shadow: 0 0 10px rgba(212,163,115,0.5), 0 0 20px rgba(212,163,115,0.2); }
+      50% { text-shadow: 0 0 20px rgba(212,163,115,0.7), 0 0 40px rgba(212,163,115,0.4), 0 0 60px rgba(184,74,74,0.2); }
+    }
+
+    .sub-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 22px;
+      color: #e8c99b;
+      margin-bottom: 60px;
+      opacity: 0.8;
+    }
+
+    .enter-btn {
+      padding: 16px 56px;
+      background: transparent;
+      border: 1px solid #d4a373;
+      color: #d4a373;
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      letter-spacing: 6px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .enter-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 50%;
+      width: 0; height: 100%;
+      background: linear-gradient(90deg, #d4a373, #e8c99b);
+      transition: all 0.5s ease;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    .enter-btn:hover {
+      color: #2a1a1a;
+      letter-spacing: 8px;
+      box-shadow: 0 0 30px rgba(212,163,115,0.5);
+    }
+    .enter-btn:hover::before {
+      width: 100%;
+    }
+
+    /* 背景装饰：漂浮光点 */
+    .sparkles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .floating-sparkle {
+      position: absolute;
+      background: radial-gradient(circle, rgba(232,201,155,0.8) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: sparkleFloat 12s ease-in-out infinite;
+    }
+    @keyframes sparkleFloat {
+      0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.3; }
+      50% { transform: translateY(-60px) translateX(20px) scale(1.1); opacity: 0.7; }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash-screen">
+    <div class="opening-glow"></div>
+    <div class="city-bg"></div>
+    <div class="door-light"></div>
+    <div class="mirror-msg">今晚，你是女王。</div>
+    
+    <div class="cover-content">
+      <h1 class="title-breathe">绯红会所</h1>
+      <p class="sub-title">The Lust Gallery</p>
+      <button class="enter-btn" onclick="enterClub()">踏入回廊</button>
+    </div>
+
+    <div class="sparkles" id="sparkleBox"></div>
+  </div>
+
+  <script>
+    // 生成漂浮光点
+    const sparkleBox = document.getElementById('sparkleBox');
+    for (let i = 0; i < 20; i++) {
+      const s = document.createElement('div');
+      s.className = 'floating-sparkle';
+      s.style.width = Math.random() * 4 + 2 + 'px';
+      s.style.height = s.style.width;
+      s.style.left = Math.random() * 100 + '%';
+      s.style.top = Math.random() * 100 + '%';
+      s.style.animationDelay = Math.random() * 5 + 's';
+      sparkleBox.appendChild(s);
+    }
+
+    function enterClub() {
+      // 触发交互事件，通知AI进入角色创建环节
+      window.te("踏入回廊");
+    }
+  </script>
+</body>
+</html>

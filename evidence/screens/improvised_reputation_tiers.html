@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #1a0f0f;
+      color: #f0e6d8;
+      font-family: 'Noto Serif SC', serif;
+      margin: 0; padding: 20px;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh;
+    }
+    .reputation-panel {
+      background: rgba(61, 36, 36, 0.9);
+      border: 1px solid rgba(212, 163, 115, 0.3);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 800px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .header {
+      text-align: center; margin-bottom: 30px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      letter-spacing: 4px; margin: 0;
+      font-size: 28px;
+      text-shadow: 0 0 10px rgba(212,163,115,0.3);
+    }
+    .header p {
+      font-size: 13px; color: #b8a88a; font-style: italic; margin-top: 5px;
+    }
+    .tier-list {
+      display: flex; flex-direction: column; gap: 15px;
+    }
+    .tier-card {
+      background: rgba(26, 15, 15, 0.6);
+      border-left: 4px solid #d4a373;
+      padding: 15px 20px;
+      border-radius: 4px 10px 10px 4px;
+      transition: transform 0.3s ease;
+    }
+    .tier-card:hover { transform: translateX(10px); background: rgba(139, 58, 58, 0.1); }
+    .tier-top {
+      display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;
+    }
+    .tier-name {
+      font-size: 18px; color: #e8c99b; font-weight: 600;
+    }
+    .tier-value {
+      font-family: 'Playfair Display', serif; color: #d4a373; font-size: 14px;
+    }
+    .tier-details {
+      font-size: 13px; color: #f0e6d8; line-height: 1.6;
+    }
+    .tier-details ul {
+      margin: 5px 0 0; padding-left: 20px; color: #b8a88a;
+    }
+    .footer-btn {
+      display: block; width: 160px; margin: 30px auto 0;
+      padding: 12px; background: transparent; border: 1px solid #d4a373;
+      color: #d4a373; font-family: 'Playfair Display', serif;
+      cursor: pointer; transition: all 0.4s;
+      text-align: center;
+    }
+    .footer-btn:hover { background: #d4a373; color: #1a0f0f; }
+  </style>
+</head>
+<body>
+  <div class="reputation-panel">
+    <div class="header">
+      <h1>声望等级体系 · Reputation</h1>
+      <p>“在欲望的阶梯上，每一级都浸透了汗水与服从”</p>
+    </div>
+    <div class="tier-list">
+      <div class="tier-card">
+        <div class="tier-top">
+          <span class="tier-name">凡庸之姿 (Newcomer)</span>
+          <span class="tier-value">RP: 0 - 500</span>
+        </div>
+        <div class="tier-details">
+          解锁内容：1层大堂与酒吧公共区域使用权。可接待普通职员、自由职业者等低产出客群。
+        </div>
+      </div>
+      <div class="tier-card" style="border-left-color: #8b3a3a;">
+        <div class="tier-top">
+          <span class="tier-name">薄暮之光 (Shadow Walker)</span>
+          <span class="tier-value">RP: 500 - 2000</span>
+        </div>
+        <div class="tier-details">
+          权限解锁：
+          <ul>
+            <li>2层标准调教包厢使用权</li>
+            <li>解锁“打击类”与“束缚类”基础道具库</li>
+            <li>可接取B级以下日常委托</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tier-card" style="border-left-color: #b84a4a;">
+        <div class="tier-top">
+          <span class="tier-name">深红蔷薇 (Scarlet Rose)</span>
+          <span class="tier-value">RP: 2000 - 5000</span>
+        </div>
+        <div class="tier-details">
+          权限解锁：
+          <ul>
+            <li>2层所有主题房（教室/办公室/监狱等）</li>
+            <li>解锁“温度类”及“中型器械”道具</li>
+            <li>解锁3层个人dom休息套房</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tier-card" style="border-left-color: #6b3a4b;">
+        <div class="tier-top">
+          <span class="tier-name">黑曜女王 (Obsidian Queen)</span>
+          <span class="tier-value">RP: 5000 - 10000</span>
+        </div>
+        <div class="tier-details">
+          权限解锁：
+          <ul>
+            <li>B2惩罚重口区及所有开发室</li>
+            <li>解锁“炮机房”与“重型刑具”</li>
+            <li>可接取S级精英委托，参与会所“表演秀”</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tier-card" style="border-left-color: #e8c99b;">
+        <div class="tier-top">
+          <span class="tier-name">永恒神谕 (Eternal Oracle)</span>
+          <span class="tier-value">RP: 10000+</span>
+        </div>
+        <div class="tier-details">
+          权限解锁：
+          <ul>
+            <li>B2公开行刑台掌控权，可发起公开调教盛宴</li>
+            <li>解锁全会所NPC“强行支配”特权</li>
+            <li>可定制私人专属道具与会所规则</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button class="footer-btn" onclick="window.nt('1c0d890e8e304a9f8b9a52cccc6952a9')">返回回廊</button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>绯红会所 · 初始化执行指令排版</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #1a0f0f;
+      color: #f0e6d8;
+      font-family: 'Noto Serif SC', serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;      flex-direction: column;
+      align-items: center;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(61, 36, 36, 0.5);
+      padding: 40px;
+      border: 1px solid rgba(212, 163, 115, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      text-align: center;
+      letter-spacing: 8px;
+      margin-bottom: 50px;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.3);
+      padding-bottom: 20px;
+    }
+    .line {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 1rem;
+      word-break: break-all;
+    }
+    .decorator {
+      text-align: center;
+      color: #b84a4a;
+      font-size: 0.8rem;
+      letter-spacing: 4px;
+      margin: 15px 0;
+      opacity: 0.8;
+      font-style: italic;
+      animation: fadeIn 2s infinite alternate;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0.4; } to { opacity: 0.9; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>第十三章：初始化执行指令</h1>
+
+    <div class="line">当玩家首次启动游戏时，GM按以下顺序执行：</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">1. 输出开机动画序列（参见3.1节，要有氛围感和代入感）</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">2. 显示欢迎界面（奢华会所风格，低沉性感的语调）</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">3. 引导角色创建（逐项引导，不要一次性列出所有选项）</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">◦ 先问姓名/艺名和年龄</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">◦ 再问外貌和性格</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">◦ 再问性偏好（详细列出选项让玩家选——施虐偏好、受虐偏好、其他偏好）</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">◦ 再问体位偏好（上位/下位/都喜欢）和称呼偏好</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">◦ 最后问初始场景和初始时间段</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">4. 角色创建完成后，生成一段角色外观确认描写</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">5. 输出初始场景描写（根据玩家选择的地点和时间，要有氛围感）</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">6. 提供第一批ABCD选项</div>
+    <div class="decorator">◆ 玫瑰点缀 ◆</div>
+    <div class="line">7. 游戏正式开���</div>
+  </div>
+</body>
+</html>

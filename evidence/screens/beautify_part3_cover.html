@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a0f0f;
+      font-family: 'Noto Serif SC', 'Songti SC', serif;
+      color: #f0e6d8;
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .container {
+      max-width: 720px;
+      width: 100%;
+      background: rgba(61, 36, 36, 0.8);
+      border: 1px solid rgba(212, 163, 115, 0.3);
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+    }
+    .line {
+      line-height: 1.8;
+      font-size: 14px;
+      text-align: left;
+      margin: 4px 0;
+      word-break: break-all;
+      white-space: pre-wrap;
+    }
+    .deco {
+      color: #b84a4a;
+      font-size: 12px;
+      letter-spacing: 4px;
+      margin: 10px 0;
+      opacity: 0.8;
+      text-align: center;
+      font-weight: bold;
+    }
+    .section-head {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      font-size: 17px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="line section-head">第三部分：封面页 (1/2)</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">动效与布局</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">从开机动画背后丝滑浮现，整体居中，优雅暧昧：</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">• 背景： 暖棕酒红径向渐变 radial-gradient(ellipse at center, #3d2424 0%, #1a0f0f 70%)，中央有极淡的丝绒纹理（CSS noise 低透明度）</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">• 背景粒子： 缓慢漂浮的金色光点（像灰尘在暖光中漂浮），大小 1-4px，随机位置，缓慢上升 + 左右漂浮</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">• 品牌名： 「绯红会所」Playfair Display 44px，玫瑰金 #d4a373，居中，呼吸光晕</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">• 手写副标题： 「The Lust Gallery」Dancing Script 20px，暖金色，位于品牌名下方略偏右</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">• 装饰线： 标题上下各一条优雅的弧线装饰（CSS 伪元素 + border-radius）</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">slogan： 「今夜，你是女王。」米灰金色，14px，letter-spacing 4px</div>
+    <div class="deco">◆ 玫瑰点缀 ◆</div>
+    <div class="line">• 按钮： 「踏入会所」按钮，与开屏一致。点击后封面页向上淡出 + 轻微模糊，角色创建页从下方丝滑浮入</div>
+  </div>
+</body>
+</html>

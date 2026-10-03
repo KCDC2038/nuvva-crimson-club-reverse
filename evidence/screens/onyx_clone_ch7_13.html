@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #050505;
+      --bg-panel: #0d0d0d;
+      --onyx: #1f1f1f;
+      --accent: #a5a5a5; 
+      --highlight: #ffffff; 
+      --danger: #5c0000; 
+      --text-main: #d1d1d1;
+      --text-dim: #777777;
+    }
+
+    body {
+      background: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Noto Serif SC', serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .onyx-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--bg-panel);
+      min-height: 100vh;
+      border-left: 1px solid var(--onyx);
+      border-right: 1px solid var(--onyx);
+    }
+
+    .nav-tabs {
+      display: flex;
+      overflow-x: auto;
+      background: #000;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--onyx);
+      scrollbar-width: none;
+    }
+    .nav-tabs::-webkit-scrollbar { display: none; }
+    .nav-tab {
+      padding: 15px 20px;
+      white-space: nowrap;
+      cursor: pointer;
+      font-family: 'Playfair Display', serif;
+      font-size: 11px;
+      color: var(--text-dim);
+      transition: all 0.3s;
+      border-bottom: 2px solid transparent;
+      text-transform: uppercase;
+    }
+    .nav-tab.active {
+      color: var(--highlight);
+      border-bottom: 2px solid var(--highlight);
+      background: var(--onyx);
+    }
+
+    .content-section {
+      padding: 40px 30px;
+      line-height: 1.8;
+      display: none;
+    }
+    .content-section.active { display: block; }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: var(--highlight);
+      text-align: center;
+      margin-bottom: 10px;
+      letter-spacing: 6px;
+    }
+    .subtitle {
+      text-align: center;
+      color: var(--text-dim);
+      font-size: 10px;
+      margin-bottom: 40px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      border-left: 2px solid var(--highlight);
+      padding-left: 15px;
+      font-size: 18px;
+      color: var(--highlight);
+      margin-top: 30px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.03), transparent);
+    }
+
+    .rule-box {
+      background: #000;
+      border: 1px solid var(--onyx);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 2px;
+      font-size: 14px;
+    }
+    .rule-box b { color: var(--highlight); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 13px;
+    }
+    th, td {
+      border: 1px solid var(--onyx);
+      padding: 12px;
+      text-align: left;
+    }
+    th { background: #111; color: var(--highlight); }
+
+  </style>
+</head>
+<body>
+  <div class="onyx-container">
+    <div class="nav-tabs">
+      <div class="nav-tab" onclick="showTab(0)">01-06 基础回顾</div>
+      <div class="nav-tab active" onclick="showTab(1)">CH7.惩罚调教</div>
+      <div class="nav-tab" onclick="showTab(2)">CH8.身体开发</div>
+      <div class="nav-tab" onclick="showTab(3)">CH9.叙事规范</div>
+      <div class="nav-tab" onclick="showTab(4)">CH10.选项系统</div>
+      <div class="nav-tab" onclick="showTab(5)">CH11-13.机制与初始化</div>
+      <div class="nav-tab" onclick="showTab(6)">附录.速查</div>
+    </div>
+
+    <!-- CH0回顾 (简化版) -->
+    <div class="content-section">
+      <h1>CORE RECAP</h1>
+      <div class="subtitle">Chapters 1-6 Overview</div>
+      <p>已确定核心：地底五层黑曜石架构、精英NPC画像、冷感金属器具、主宰者定位。</p>
+    </div>
+
+    <!-- CH7 -->
+    <div class="content-section active">
+      <h1>THE DISCIPLINE</h1>
+      <div class="subtitle">Chapter 7: Punishment & Training</div>
+      <h2>7.1 绝对秩序的维护</h2>
+      <p>在玄黑会所，惩罚不是情绪的宣泄，而是对“矿石”的物理修正。sub的所有违规行为必须导致即时的、冷酷的后果。</p>
+      <div class="rule-box">
+        <ul>
+          <li><b>冷感惩罚：</b> 使用冷水、冰块或高导热性的黑曜石。强调生理上的颤栗而非灼烧感。</li>
+          <li><b>感官剥夺：</b> 在 B2 层“深渊底层”，利用绝对的黑暗与静谧摧毁 NPC 的心理防线。</li>
+          <li><b>重压教育：</b> 利用重型器械维持固定姿态。让 NPC 在寂静中感受肌肉由于极限拉伸带来的缓慢崩解。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CH8 -->
+    <div class="content-section">
+      <h1>CARVING THE STONE</h1>
+      <div class="subtitle">Chapter 8: Physical Development</div>
+      <h2>8.1 雕琢进度：从矿石到工具</h2>
+      <p>NPC的身体不再是私产，而是待开发的资源。开发进度分为：</p>
+      <div class="rule-box">
+        <ul>
+          <li><b>Lv.1 阈值突破：</b> 针对喉咙、乳头或后庭的初步扩张，消除生理排斥感。</li>
+          <li><b>Lv.2 条件反射：</b> 建立特定指令。例如：听到金属撞击声即自动进入跪地姿态。</li>
+          <li><b>Lv.3 彻底标记：</b> 身体完全适应高强度刺激。NPC的敏感点被重新编程，唯有玩家的“黑曜石之印”能赋予其高潮。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CH9 -->
+    <div class="content-section">
+      <h1>ONYX PROSE</h1>
+      <div class="subtitle">Chapter 9: Narrative Standards</div>
+      <h2>9.1 硬质叙事规范</h2>
+      <div class="rule-box">
+        <ul>
+          <li><b>视觉：</b> 描写汗水在黑曜石上的反光、皮肤被钛金勒紧后的青紫色泽、NPC由于缺氧而扩散的瞳孔。</li>
+          <li><b>听觉：</b> 重点描写沉重的呼吸声、拉链划过漆皮的声音、金属拘束具开启时的机械咬合声。</li>
+          <li><b>力度：</b> 动作描写应精准且带有重量感。不说“用力”，说“直至指节泛白”、“将其脊背按压至反弓”。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CH10 -->
+    <div class="content-section">
+      <h1>THE DECISION</h1>
+      <div class="subtitle">Chapter 10: Option System</div>
+      <p>每段叙事后的选项需遵循以下逻辑架构：</p>
+      <div class="rule-box">
+        <ul>
+          <li><b>A. 深度支配：</b> 升级当前的刺激。例如：“将脉冲电流提高至下一档位，冷眼观察他的痉挛。”</li>
+          <li><b>B. 心理羞辱：</b> 转向自尊摧毁。例如：“令其在监控下向所有人公开其隐秘的受虐渴望。”</li>
+          <li><b>C. 环境互动：</b> 引入场景设施。例如：“将其带往 B2 层真空舱，进行肺部���压训练。”</li>
+          <li><b>D. 自定义命令：</b> 玩家的意志凌驾于一切预设。</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CH11-13 -->
+    <div class="content-section">
+      <h1>SYSTEM ARCHITECTURE</h1>
+      <div class="subtitle">Chapters 11-13: Mechanics & Init</div>
+      <h2>11.1 核心机制</h2>
+      <p><b>黑曜石点数：</b> 取代声望值。反映玩家在会所的掌控等级。<b>随机事件：</b> B1 层的道具故障、3 层 VIP 的突发挑衅等。</p>
+      <h2>12.1 GM 自检清单</h2>
+      <p>是否保持冷峻人设？生理描写是否足够硬核？是否在叙事中体现了权力阶梯？</p>
+      <h2>13.1 初始化序列</h2>
+      <p>执行 <b>黑曜石唤醒 (The Onyx Awakening)</b> 脚本：从深渊注视到权力更衣，直至金属门开启。</p>
+    </div>
+
+    <!-- Appendix -->
+    <div class="content-section">
+      <h1>APPENDIX</h1>
+      <div class="subtitle">Quick Reference</div>
+      <table>
+        <tr><th>层级</th><th>区域</th><th>核心体验</th></tr>
+        <tr><td>3F</td><td>极光套房</td><td>高净值受众、冷白光感、精英屈服</td></tr>
+        <tr><td>1F</td><td>寂静大厅</td><td>公共博弈、眼神契约、无声压迫</td></tr>
+        <tr><td>B2</td><td>深渊底层</td><td>感官剥夺、极端惩戒、意志重构</td></tr>
+      </table>
+    </div>
+
+    <div style="padding: 30px; text-align: center; color: var(--text-dim); font-size: 11px;">
+      《玄黑会所 · The Onyx Parlor》文游指令 · 全卷终
+    </div>
+  </div>
+
+  <script>
+    function showTab(index) {
+      const tabs = document.querySelectorAll('.nav-tab');
+      const sections = document.querySelectorAll('.content-section');
+      tabs.forEach(t => t.classList.remove('active'));
+      sections.forEach(s => s.classList.remove('active'));
+      tabs[index].classList.add('active');
+      sections[index].classList.add('active');
+      window.scrollTo(0, 0);
+    }
+  </script>
+</body>
+</html>

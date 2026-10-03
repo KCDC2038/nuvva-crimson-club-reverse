@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Serif+SC:wght@400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a0f0f;
+      font-family: 'Noto Serif SC', serif;
+      color: #f0e6d8;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .memory-card {
+      max-width: 800px;
+      width: 100%;
+      background: rgba(61, 36, 36, 0.9);
+      border: 1px solid rgba(212, 163, 115, 0.3);
+      border-radius: 16px;
+      padding: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+      padding-bottom: 20px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      font-size: 24px;
+      letter-spacing: 4px;
+    }
+    .section {
+      margin-bottom: 25px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      color: #b8895a;
+      font-size: 16px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(212,163,115,0.4), transparent);
+    }
+    .content-item {
+      background: rgba(26, 15, 15, 0.5);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(107, 58, 75, 0.2);
+    }
+    .label {
+      color: #b8a88a;
+      font-size: 12px;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .value {
+      font-size: 14px;
+      line-height: 1.6;
+      word-break: break-all;
+    }
+    .tag {
+      display: inline-block;
+      padding: 2px 8px;
+      background: rgba(184, 74, 74, 0.2);
+      border: 1px solid rgba(184, 74, 74, 0.4);
+      border-radius: 4px;
+      font-size: 11px;
+      color: #d46a6a;
+      margin-top: 5px;
+    }
+    .json-key { color: #d4a373; }
+    .json-string { color: #e8c99b; }
+    .json-null { color: #8b7a68; }
+  </style>
+</head>
+<body>
+  <div class="memory-card">
+    <div class="header">
+      <h1>Working Memory Area</h1>
+      <p style="font-size: 11px; color: #8b7a68; margin-top: 5px;">Last Synchronized: 2026-10-02 14:33:53</p>
+    </div>
+
+    <div class="section">
+      <div class="section-title">ACTIVE SKILLS</div>
+      <div class="content-item">
+        <div class="label">Skill Name</div>
+        <div class="value">《绯红会所》女DOM</div>
+        <div class="tag">ID: CHTKMXRTNSZN</div>
+        <div style="margin-top: 10px; font-size: 12px; color: #a08878;">
+          摘要：沉浸式BDSM叙事模拟器。包含完整的UI美化协议及12章文游指令规范，严格执行色情直白描写与UI动态效果叠加。
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">LOADED DOCUMENTS</div>
+      <div class="content-item">
+        <div class="label">File 1 Path</div>
+        <div class="value">.../绯红会所/《绯红会所》女DOM_美化协议.md</div>
+      </div>
+      <div class="content-item">
+        <div class="label">File 2 Path</div>
+        <div class="value">.../绯红会所/《绯红会所》女DOM_文游指令.md</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">SESSION DATA STATE</div>
+      <div class="content-item">
+        <pre style="font-family: 'Cormorant Garamond', serif; font-size: 14px;">{
+  <span class="json-key">"queen_profile"</span>: <span class="json-null">null</span>, 
+  <span class="json-key">"active_npcs"</span>: [],
+  <span class="json-key">"current_location"</span>: <span class="json-string">"Unknown (Pending Creation)"</span>,
+  <span class="json-key">"reputation_score"</span>: <span class="json-string">"0"</span>,
+  <span class="json-key">"inventory"</span>: [],
+  <span class="json-key">"session_step"</span>: <span class="json-string">"UI_TESTING_STAGE"</span>
+}</pre>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">CONTEXT SETTINGS</div>
+      <div class="content-item">
+        <div class="label">Multi-Texting Mode</div>
+        <div class="value">FALSE (Single Response)</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

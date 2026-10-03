@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #1a0f0f;
+      color: #f0e6d8;
+      font-family: 'Noto Serif SC', serif;
+      margin: 0; padding: 20px;
+      min-height: 100vh;
+      display: flex; justify-content: center;
+    }
+    .toy-vault {
+      background: rgba(61, 36, 36, 0.9);
+      border: 1px solid rgba(212, 163, 115, 0.3);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 900px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .header {
+      text-align: center; margin-bottom: 40px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      letter-spacing: 6px; margin: 0;
+      font-size: 32px;
+      text-shadow: 0 0 15px rgba(212,163,115,0.3);
+    }
+    .header p {
+      font-size: 14px; color: #b8a88a; font-style: italic; margin-top: 8px;
+    }
+    .toy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .toy-card {
+      background: rgba(26, 15, 15, 0.6);
+      border: 1px solid rgba(107, 58, 75, 0.4);
+      border-radius: 12px;
+      padding: 20px;
+      transition: all 0.35s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .toy-card:hover {
+      border-color: #d4a373;
+      transform: translateY(-5px);
+      background: rgba(86, 46, 46, 0.2);
+    }
+    .toy-card::before {
+      content: '❦';
+      position: absolute; top: 10px; right: 15px;
+      color: rgba(212, 163, 115, 0.1); font-size: 24px;
+    }
+    .category-name {
+      font-family: 'Playfair Display', serif;
+      color: #e8c99b;
+      font-size: 18px;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+      padding-bottom: 10px; margin-bottom: 15px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .toy-examples {
+      font-size: 14px; color: #f0e6d8; margin-bottom: 12px;
+    }
+    .toy-examples strong { color: #d4a373; font-weight: normal; }
+    .stat-impact {
+      font-size: 12px; color: #b8a88a; line-height: 1.5;
+      background: rgba(0,0,0,0.2); padding: 8px; border-radius: 6px;
+    }
+    .how-to-get {
+      margin-top: 10px; font-size: 11px; color: #8b3a3a; font-style: italic;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .footer-action {
+      text-align: center; margin-top: 40px;
+    }
+    .back-btn {
+      padding: 12px 40px; background: transparent; border: 1px solid #d4a373;
+      color: #d4a373; font-family: 'Playfair Display', serif;
+      cursor: pointer; transition: all 0.4s; letter-spacing: 2px;
+    }
+    .back-btn:hover { background: #d4a373; color: #1a0f0f; }
+  </style>
+</head>
+<body>
+  <div class="toy-vault">
+    <div class="header">
+      <h1>会所道具库 · The Armory</h1>
+      <p>“工欲善其事，必先利其器”</p>
+    </div>
+    <div class="toy-grid">
+      <!-- 1. 束缚类 -->
+      <div class="toy-card">
+        <div class="category-name"><span>🔗</span> 束缚类</div>
+        <div class="toy-examples"><strong>示例：</strong>真皮项圈、麻绳、手铐</div>
+        <div class="stat-impact">✦ 提升：服从度、羞耻感<br>✦ 消耗：些微体力值</div>
+        <div class="how-to-get">🔒 获得：凡庸之姿初始解锁</div>
+      </div>
+      <!-- 2. 刺激类 -->
+      <div class="toy-card">
+        <div class="category-name"><span>📳</span> 刺激类</div>
+        <div class="toy-examples"><strong>示例：</strong>磁吸跳蛋、乳头夹</div>
+        <div class="stat-impact">✦ 提升：兴奋值、全身敏感度<br>✦ 效果：加速高潮到来</div>
+        <div class="how-to-get">🔒 获得：1层道具库直接取用</div>
+      </div>
+      <!-- 3. 打击类 -->
+      <div class="toy-card">
+        <div class="category-name"><span>🏹</span> 打击类</div>
+        <div class="toy-examples"><strong>示例：</strong>散鞭、红木戒尺</div>
+        <div class="stat-impact">✦ 提升：痛感、恐惧值/服从<br>✦ 消耗：大量体力值</div>
+        <div class="how-to-get">🔒 获得：薄暮之光等级解锁</div>
+      </div>
+      <!-- 4. 温度类 -->
+      <div class="toy-card">
+        <div class="category-name"><span>🧊</span> 温度类</div>
+        <div class="toy-examples"><strong>示例：</strong>低温蜡烛、冰块</div>
+        <div class="stat-impact">✦ 提升：皮肤敏感度、心理张力<br>✦ 效果：感官刺激强化</div>
+        <div class="how-to-get">🔒 获得：2层VIP区域特供</div>
+      </div>
+      <!-- 5. 扩张类 -->
+      <div class="toy-card">
+        <div class="category-name"><span>🔌</span> 扩张类</div>
+        <div class="toy-examples"><strong>示例：</strong>金属肛塞、扩张球</div>
+        <div class="stat-impact">✦ 提升：后庭开发度、容纳度<br>✦ 效果：永久改变身体阈值</div>
+        <div class="how-to-get">🔒 获得：B2层开发室专属</div>
+      </div>
+      <!-- 6. 液体类 -->
+      <div class="toy-card">
+        <div class="category-name"><span>💧</span> 液体类</div>
+        <div class="toy-examples"><strong>示例：</strong>热感润滑剂、催情香氛</div>
+        <div class="stat-impact">✦ 提升：湿润度、基础兴奋速度<br>✦ 效果：减少身体损伤</div>
+        <div class="how-to-get">🔒 获得：全楼层服务台无限量供应</div>
+      </div>
+      <!-- 7. 辅助类 -->
+      <div class="toy-card">
+        <div class="category-name"><span>🎭</span> 辅助类</div>
+        <div class="toy-examples"><strong>示例：</strong>落地大镜、摄像头、扩音器</div>
+        <div class="stat-impact">✦ 提升：羞耻感、心理支配度<br>✦ 效果：增加视觉/听觉反馈</div>
+        <div class="how-to-get">🔒 获得：主题房配套设施</div>
+      </div>
+      <!-- 8. 服装类 -->
+      <div class="toy-card">
+        <div class="category-name"><span>👗</span> 服装类</div>
+        <div class="toy-examples"><strong>示例：</strong>漆皮开裆裤、蕾丝眼罩</div>
+        <div class="stat-impact">✦ 提升：视觉兴奋、角色代入感<br>✦ 效果：解锁特殊对话/场景</div>
+        <div class="how-to-get">🔒 获得：3层女王化妆间定制</div>
+      </div>
+      <!-- 9. 重型器械 -->
+      <div class="toy-card" style="border-color: #8b3a3a;">
+        <div class="category-name"><span style="color:#b84a4a;">⚙️</span> 重型器械</div>
+        <div class="toy-examples"><strong>示例：</strong>全自动炮机、三角木马</div>
+        <div class="stat-impact">✦ 提升：极度兴奋、强制高潮<br>✦ 消耗：生命值/极度体力</div>
+        <div class="how-to-get">🔥 获得：黑曜女王等级专属权限</div>
+      </div>
+    </div>
+    <div class="footer-action">
+      <button class="back-btn" onclick="window.nt('4085fe62f007475fac135caed0cb948e')">返回声望阶梯</button>
+    </div>
+  </div>
+</body>
+</html>

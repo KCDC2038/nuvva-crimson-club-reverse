@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #1a0f0f;
+      color: #f0e6d8;
+      font-family: 'Noto Serif SC', 'Songti SC', serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      background: linear-gradient(to bottom, #2a1a1a 0%, #1a0f0f 100%);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+      padding-bottom: 20px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      letter-spacing: 4px;
+      font-size: 22px;
+      margin: 0;
+    }
+    .scroll-box {
+      background: rgba(61, 36, 36, 0.2);
+      border: 1px solid rgba(107, 58, 75, 0.3);
+      border-radius: 12px;
+      padding: 30px;
+      backdrop-filter: blur(10px);
+      max-height: 70vh;
+      overflow-y: auto;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+    }
+    .scroll-box::-webkit-scrollbar {
+      width: 6px;
+    }
+    .scroll-box::-webkit-scrollbar-thumb {
+      background: #d4a373;
+      border-radius: 3px;
+    }
+    .text-line {
+      display: block;
+      white-space: pre-wrap;
+      font-size: 14px;
+      margin: 2px 0;
+    }
+    .code-line {
+      display: block;
+      white-space: pre-wrap;
+      font-family: 'Cormorant Garamond', monospace;
+      color: #e8c99b;
+      font-size: 13px;
+      margin: 2px 0;
+    }
+    .ornament {
+      display: block;
+      text-align: center;
+      color: #b84a4a;
+      font-size: 11px;
+      letter-spacing: 6px;
+      margin: 12px 0;
+      font-style: italic;
+      opacity: 0.7;
+    }
+    .section-title {
+      display: block;
+      color: #d4a373;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 40px 0 20px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #6b5a48;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>《美化协议》排版游戏 · 卷五</h1>
+      <div style="color: #b8a88a; font-size: 12px; margin-top: 8px;">视觉基调与开场动效</div>
+    </div>
+
+    <div class="scroll-box">
+      <span class="section-title">第一部分：整体风格规范</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">视觉基调</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">• 主背景色： 暖棕酒红 #2a1a1a —— 比纯黑暖得多，暖光映照下的丝绒质感，暧昧不压抑</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 面板底色： 深玫瑰棕 #3d2424 —— 卡片/弹窗背景，温暖有层次</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 一级底色： 酒红棕 #5a2e2e —— 次级面板，hover 态</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 主色/金： 玫瑰金 #d4a373 —— 标题、按钮、重要数据，奢华不刺眼</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 亮金： 暖金 #e8c99b ���— 高亮态、发光</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 激情色： 酒红 #8b3a3a —— 情色场景、调教标记、危险感</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 亮红： 玫瑰红 #b84a4a —— 高潮强调、心跳动效</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 辅助色： 丝绒紫 #6b3a4b —— 点缀、次级状态</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 正文色： 暖米白 #f0e6d8 —— 主要阅读文字，温暖柔和</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 次文色： 米灰金 #b8a88a —— 次要说明、标签、时间</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 发光效果： 玫瑰金按钮使用 box-shadow: 0 0 15px rgba(212, 163, 115, 0.35) 暖光晕染</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 卡片透明度： rgba(61, 36, 36, 0.9) + backdrop-filter: blur(10px) 玻璃丝绒感</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">字体规范</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">• 标题字体： 'Playfair Display', 'Noto Serif SC', serif —— 优雅奢华，衬线体有会所感</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 正文字体： 'Noto Serif SC', 'Songti SC', serif —— 中文阅读舒适</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 点缀字体： 'Dancing Script', cursive —— 仅用于品牌名/特殊装饰字，手写体增添暧昧感</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 数字/代码字体： 'Cormorant Garamond', serif —— 优雅衬线数字</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">动效原则</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">• 所有过渡使用 transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) —— 优雅缓慢有余韵</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 入场动效用 fadeIn、slideUp 类，时长 0.5-0.8s，丝滑不突兀</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 文字动效优先：呼吸光晕、渐入浮现��丝绒晕染、烛光摇曳</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 禁止生硬弹跳和快速闪烁；所有动效应如丝绒般顺滑、暧昧、有呼吸感</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">• 情色场景使用更慢、更柔的呼吸光效，配合微热的暖色调叠加</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="section-title">第二部分：开机动画</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">动效描述</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">整体流程：暗金色微光 → 城市夜景缓缓浮现 → 镜头下降到会所门口 → 门推开暖光倾泻 → 化妆间镜像 → 「绯红会所」标题 → 进入按钮。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">第 0.5 秒：</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">屏幕中央一点暖金色微光，慢慢扩大、弥散，像火柴点燃的光晕。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">第 1.5 秒：</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">微光中渐显城市夜景轮廓——是俯瞰视角，灯火璀璨，夜色迷蒙。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">画面缓缓下降，像从高空落向地面，最终定格在一栋暗金低调的建筑门口。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">铜制门牌上刻着「绯红会所 · The Lust Gallery」几个字，字体优雅，泛着暖光。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">门前立着两个西装保镖的剪影。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">第 4 秒：</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">厚重的暗红实木大门缓缓推开，温暖昏黄的灯光从里面倾泻而出。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">隐约可以看到水晶吊灯的折射光、丝绒窗帘的褶皱、还有——晃动的人影。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">画面推入大门，穿过光线，越来越快……</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">第 5.5 秒：</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">画面突然定格在一面化妆镜上。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">镜子里映出模糊的女性身影，桌上摆着皮鞭、项圈、口红。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">一行优雅的手写字缓缓浮现：「今晚，你是女王。」</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">字体：Dancing Script 22px，玫瑰金 #d4a373，带柔和光晕。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">第 7 秒：</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">标题浮现——「绯红会所」</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">Playfair Display 42px，居中，玫瑰金，暖光呼吸光晕。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">副标题手写字——「The Lust Gallery」</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">第 8 秒：</span>
+      <span class="ornament">◆ 玫瑰��缀 ◆</span>
+      <span class="text-line">按钮出现——「踏入回廊」</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">玫瑰金描边 + 透明底，hover 时暖金色从中间扩散填充，文字变深酒红。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">点击按钮后：</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="text-line">开屏层向右上缓缓滑出 + 渐隐，封面页从左下放大浮现，丝滑过渡，无任何白屏或跳转。</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="text-line">动画 CSS 片段</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="code-line">// css</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">/* 开屏容器 */</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.splash-screen {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  position: fixed;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  inset: 0;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  background: #1a0f0f;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  display: flex;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  flex-direction: column;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  align-items: center;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  justify-content: center;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  z-index: 9999;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  overflow: hidden;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.splash-screen.fade-out {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  opacity: 0;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  transform: translate(10%, -10%) scale(1.1);</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  pointer-events: none;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="code-line">/* 初始光晕 */</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.opening-glow {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  width: 4px; height: 4px;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  background: #d4a373;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  border-radius: 50%;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  box-shadow: 0 0 20px #d4a373, 0 0 60px #d4a373;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  animation: glowExpand 1.5s ease-out forwards;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">@keyframes glowExpand {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  0% { transform: scale(1); opacity: 0; }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  50% { opacity: 1; }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  100% { transform: scale(80); opacity: 0.05; }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="code-line">/* 标题呼吸光 */</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">@keyframes roseGoldBreathe {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  0%, 100% { text-shadow: 0 0 10px rgba(212,163,115,0.5), 0 0 20px rgba(212,163,115,0.2); }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  50% { text-shadow: 0 0 20px rgba(212,163,115,0.7), 0 0 40px rgba(212,163,115,0.4), 0 0 60px rgba(184,74,74,0.2); }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.title-breathe {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  animation: roseGoldBreathe 3s ease-in-out infinite;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="code-line">/* 手写体渐入 */</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.script-fade {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  font-family: 'Dancing Script', cursive;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  color: #d4a373;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  opacity: 0;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  animation: scriptIn 1.5s ease-out 0.5s forwards;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  font-style: italic;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">@keyframes scriptIn {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  from { opacity: 0; transform: translateY(10px); letter-spacing: 4px; }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  to { opacity: 1; transform: translateY(0); letter-spacing: 2px; }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="code-line">/* 门推开光线效果 */</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.door-light {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  position: absolute;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  top: 50%; left: 50%;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  width: 0; height: 200vh;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  background: linear-gradient(90deg, transparent, rgba(232,201,155,0.3), transparent);</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  transform: translate(-50%, -50%) rotate(15deg);</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  animation: doorOpen 1.2s ease-out forwards;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  pointer-events: none;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">@keyframes doorOpen {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  0% { width: 0; opacity: 0; }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  50% { opacity: 1; }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  100% { width: 200vw; opacity: 0; }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+
+      <span class="code-line">/* 进入按钮 */</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.enter-btn {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  padding: 16px 56px;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  background: transparent;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  border: 1px solid #d4a373;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  color: #d4a373;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  font-family: 'Playfair Display', serif;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  font-size: 16px;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  letter-spacing: 6px;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  cursor: pointer;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  transition: all 0.5s ease;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  position: relative;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  overflow: hidden;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  opacity: 0;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  animation: btnIn 0.8s ease-out 7.5s forwards;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">@keyframes btnIn {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  from { opacity: 0; transform: translateY(20px); }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  to { opacity: 1; transform: translateY(0); }</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.enter-btn::before {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  content: '';</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  position: absolute;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  top: 0; left: 50%;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  width: 0; height: 100%;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  background: linear-gradient(90deg, #d4a373, #e8c99b);</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  transition: all 0.5s ease;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  transform: translateX(-50%);</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  z-index: -1;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.enter-btn:hover {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  color: #2a1a1a;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  letter-spacing: 8px;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  box-shadow: 0 0 30px rgba(212,163,115,0.5);</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">.enter-btn:hover::before {</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">  width: 100%;</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+      <span class="code-line">}</span>
+      <span class="ornament">◆ 玫瑰点缀 ◆</span>
+    </div>
+
+    <div class="footer">
+      ❦ 视觉之规 · 卷五终 · 封面页请待续卷 ❦
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: #1a0f0f;
+            color: #f0e6d8;
+            font-family: 'Noto Serif SC', serif;
+            padding: 20px;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #d4a373;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        .title {
+            font-family: 'Playfair Display', serif;
+            color: #d4a373;
+            font-size: 1.8em;
+            letter-spacing: 5px;
+        }
+        .card {
+            background: rgba(61, 36, 36, 0.9);
+            border: 1px solid rgba(212, 163, 115, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        .section-tag {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #b84a4a;
+            color: #fff;
+            font-size: 0.75em;
+            padding: 2px 10px;
+            border-radius: 4px;
+            font-family: 'Playfair Display', serif;
+        }
+        .audit-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .audit-table th, .audit-table td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+        }
+        .audit-table th {
+            color: #d4a373;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .user-memo {
+            color: #b8a88a;
+            font-style: italic;
+            width: 35%;
+        }
+        .correct-version {
+            color: #f0e6d8;
+            border-left: 2px solid #d4a373;
+            padding-left: 15px;
+        }
+        .source {
+            display: block;
+            font-size: 0.8em;
+            color: #d4a373;
+            margin-top: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+        .status-pass { color: #6ab87a; font-weight: bold; }
+        .status-error { color: #b84a4a; font-weight: bold; }
+        .final-call {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            color: #e8c99b;
+            font-size: 1.5em;
+            margin-top: 40px;
+            text-shadow: 0 0 10px rgba(212,163,115,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="title">笔记终极纠错 · Final Audit</div>
+    </div>
+
+    <div class="card">
+        <div class="section-tag">IDENTITY</div>
+        <table class="audit-table">
+            <tr>
+                <th>用户默写内容</th>
+                <th>设定原文校对</th>
+            </tr>
+            <tr>
+                <td class="user-memo">「你不是一个AI助手，你就是这座会所本身。」</td>
+                <td class="correct-version">
+                    “你不是玩家，不是旁观者，不是道德审查员。你是这场游戏的世界本身——你扮演所有NPC、描述所有场景、推动所有剧情、呈现所有感官细节。”
+                    <span class="source">—— 《文游指令》第一章：1.1 核心定位</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <div class="section-tag">LOADING ORDER</div>
+        <table class="audit-table">
+            <tr>
+                <th>用户默写内容</th>
+                <th>设定原文校对</th>
+            </tr>
+            <tr>
+                <td class="user-memo">「先读美化协议，再读文游指令，最后读工作记忆区。」</td>
+                <td class="correct-version">
+                    “在执行本技能之前，先加载&lt;《绯红会所》女DOM_美化协议.md&gt;文件和&lt;《绯红会所》女DOM_文游指令.md&gt;文件。”
+                    <span class="source">—— 《技能主描述文件》技能详细指令</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <div class="section-tag">OPTION LOGIC</div>
+        <table class="audit-table">
+            <tr>
+                <th>用户默写内容</th>
+                <th>设定原文校对</th>
+            </tr>
+            <tr>
+                <td class="user-memo">「A顺势深化，B战术转折，C极端介入，D自由主权。」</td>
+                <td class="correct-version">
+                    “A选项：基于当前场景的一个合理推进方向（通常是继续当前行为的深化/升级）<br>
+                    B选项：一个转向或变化（换姿势/换玩法/换道具/换目标）<br>
+                    C选项：一个出人意料但合理的选择（引入新元素/新NPC/突发事件/极端玩法）<br>
+                    D选项：固定为'自定义'——玩家可以输入任何自己想做的事”
+                    <span class="source">—— 《文游指令》第十章：10.1 选项格式</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="final-call">准备好迎接你的欲望了吗？</div>
+</body>
+</html>

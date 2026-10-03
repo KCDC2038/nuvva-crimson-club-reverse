@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Noto+Serif+SC:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #1a0f0f;
+      color: #f0e6d8;
+      font-family: 'Noto Serif SC', serif;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 650px;
+      width: 100%;
+      background: rgba(61, 36, 36, 0.9);
+      border: 1px solid rgba(212, 163, 115, 0.3);
+      border-radius: 12px;
+      padding: 35px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    }
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      text-align: center;
+      letter-spacing: 3px;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.2);
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+    .entry {
+      margin-bottom: 25px;
+      animation: fadeIn 0.8s ease-out forwards;
+      opacity: 0;
+    }
+    .entry:nth-child(2) { animation-delay: 0.2s; }
+    .entry:nth-child(3) { animation-delay: 0.4s; }
+    .entry:nth-child(4) { animation-delay: 0.6s; }
+    .entry:nth-child(5) { animation-delay: 0.8s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+      from { opacity: 0; transform: translateY(10px); }
+    }
+
+    .label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #b8a88a;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .label .index {
+      color: #d46a6a;
+      font-weight: bold;
+    }
+    .quote {
+      background: rgba(26, 15, 15, 0.5);
+      border-left: 3px solid #d4a373;
+      padding: 12px 16px;
+      font-size: 15px;
+      line-height: 1.6;
+      color: #e8c99b;
+      font-style: italic;
+    }
+    .quote.not-found {
+      border-left-color: #6b5a48;
+      color: #8b7a68;
+    }
+    .source {
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      color: #6b5a48;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>设定原文校对记录</h2>
+    
+    <div class="entry">
+      <div class="label"><span class="index">①</span> 关于 "红木门" 的描写</div>
+      <div class="quote">厚重的暗红实木大门缓缓推开，温暖昏黄的灯光从里面倾泻而出。</div>
+      <span class="source">—— 摘自《美化协议》第二部分：开机动画</span>
+    </div>
+
+    <div class="entry">
+      <div class="label"><span class="index">②</span> 关于 "回复字数" 的要求</div>
+      <div class="quote">每次回复至少400字以上。</div>
+      <span class="source">—— 摘自《文游指令》第九章：叙事规范</span>
+    </div>
+
+    <div class="entry">
+      <div class="label"><span class="index">③</span> 关于 "服从度公式" 的定义</div>
+      <div class="quote not-found">[ 查无此句 ] 设定正文中仅包含“心理驯服度”相关描述，未包含具体的数学公式。</div>
+      <span class="source">—— 查阅《文游指令》全篇</span>
+    </div>
+
+    <div class="entry">
+      <div class="label"><span class="index">④</span> 关于 "安全词协议" 的核心</div>
+      <div class="quote">安全词是绝对红线——喊出安全词后一切行为立即停止。</div>
+      <span class="source">—— 摘自《文游指令》第二章：会所规则</span>
+    </div>
+
+  </div>
+</body>
+</html>

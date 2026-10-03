@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #1a0f0f;
+      color: #f0e6d8;
+      font-family: 'Noto Serif SC', 'Songti SC', serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: radial-gradient(circle at top, #2a1a1a 0%, #1a0f0f 100%);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.3);
+      padding-bottom: 20px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      letter-spacing: 4px;
+      font-size: 28px;
+      margin: 0;
+    }
+    .header p {
+      font-family: 'Dancing Script', cursive;
+      color: #b8a88a;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    .directory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 20px;
+    }
+    .chapter-card {
+      background: rgba(61, 36, 36, 0.5);
+      border: 1px solid rgba(107, 58, 75, 0.4);
+      border-radius: 12px;
+      padding: 18px;
+      transition: all 0.3s ease;
+    }
+    .chapter-card:hover {
+      border-color: #d4a373;
+      background: rgba(107, 58, 75, 0.2);
+      transform: translateY(-2px);
+    }
+    .chapter-title {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-left: 3px solid #b84a4a;
+      padding-left: 10px;
+    }
+    .section-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .section-item {
+      font-size: 13px;
+      color: #b8a88a;
+      padding: 4px 0;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.1);
+      display: flex;
+      justify-content: space-between;
+    }
+    .section-item:last-child {
+      border-bottom: none;
+    }
+    .section-num {
+      color: #d46a6a;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #6b5a48;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>《绯红会所》文游指令全书目录</h1>
+      <p>The Lust Gallery · Command Index</p>
+    </div>
+
+    <div class="directory-grid">
+      <!-- Chapter 1 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第一章：身份与核心职责</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">1.1</span>核心定位</span></div>
+          <div class="section-item"><span><span class="section-num">1.2</span>绝对原则</span></div>
+          <div class="section-item"><span><span class="section-num">1.3</span>你的工作模式</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 2 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第二章：游戏世界观</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">2.1</span>基础世界观</span></div>
+          <div class="section-item"><span><span class="section-num">2.2</span>玩家身份</span></div>
+          <div class="section-item"><span><span class="section-num">2.3</span>会所规则</span></div>
+          <div class="section-item"><span><span class="section-num">2.4</span>世界的运行逻辑</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 3 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第三章：游戏开局与角色创建</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">3.1</span>开机动画</span></div>
+          <div class="section-item"><span><span class="section-num">3.2</span>角色创建系统</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 4 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第四章：会所区域设定</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">4.1</span>会所总览</span></div>
+          <div class="section-item"><span><span class="section-num">4.2</span>各区域详细设定</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 5 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第五章：NPC素材库</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">5.1</span>NPC生成原则</span></div>
+          <div class="section-item"><span><span class="section-num">5.2</span>男性sub素材库</span></div>
+          <div class="section-item"><span><span class="section-num">5.3</span>男性dom素材库</span></div>
+          <div class="section-item"><span><span class="section-num">5.4</span>其他NPC</span></div>
+          <div class="section-item"><span><span class="section-num">5.5</span>NPC互动原则</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 6 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第六章：道具系统</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">6.1</span>道具获取</span></div>
+          <div class="section-item"><span><span class="section-num">6.2</span>道具分类</span></div>
+          <div class="section-item"><span><span class="section-num">6.3</span>道具使用规则</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 7 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第七章：惩罚与调教系统</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">7.1</span>惩罚触发场景</span></div>
+          <div class="section-item"><span><span class="section-num">7.2</span>惩罚类型</span></div>
+          <div class="section-item"><span><span class="section-num">7.3</span>反支配惩罚</span></div>
+          <div class="section-item"><span><span class="section-num">7.4</span>安全词机制</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 8 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第八章：身体开发系统</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">8.1</span>开发追踪</span></div>
+          <div class="section-item"><span><span class="section-num">8.2</span>开发效果</span></div>
+          <div class="section-item"><span><span class="section-num">8.3</span>玩家自身的开发</span></div>
+          <div class="section-item"><span><span class="section-num">8.4</span>条件反射机制</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 9 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第九章：叙事规范与写作标准</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">9.1</span>性器官描写标准</span></div>
+          <div class="section-item"><span><span class="section-num">9.2</span>性行为描写标准</span></div>
+          <div class="section-item"><span><span class="section-num">9.3</span>体液与分泌物描写</span></div>
+          <div class="section-item"><span><span class="section-num">9.4</span>叙事节奏控制</span></div>
+          <div class="section-item"><span><span class="section-num">9.5</span>权力关系描写</span></div>
+          <div class="section-item"><span><span class="section-num">9.6</span>角色对话与声音</span></div>
+          <div class="section-item"><span><span class="section-num">9.7</span>多人场景处理</span></div>
+          <div class="section-item"><span><span class="section-num">9.8</span>长度与密度</span></div>
+          <div class="section-item"><span><span class="section-num">9.9</span>文风与语言风格</span></div>
+          <div class="section-item"><span><span class="section-num">9.10</span>禁止事项</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 10 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第十章：互动选项系统</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">10.1</span>选项格式</span></div>
+          <div class="section-item"><span><span class="section-num">10.2</span>选项设计原则</span></div>
+          <div class="section-item"><span><span class="section-num">10.3</span>选项呈现示例</span></div>
+          <div class="section-item"><span><span class="section-num">10.4</span>特殊情况处理</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 11 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第十一章：游戏特殊机制</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">11.1</span>声望/名气系统</span></div>
+          <div class="section-item"><span><span class="section-num">11.2</span>任务/委托系统</span></div>
+          <div class="section-item"><span><span class="section-num">11.3</span>好感度与关系系统</span></div>
+          <div class="section-item"><span><span class="section-num">11.4</span>事件系统</span></div>
+          <div class="section-item"><span><span class="section-num">11.5</span>无限制原则</span></div>
+        </div>
+      </div>
+
+      <!-- Chapter 12 & 13 -->
+      <div class="chapter-card">
+        <div class="chapter-title">第十二章：GM自检清单</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">12.1</span>叙事质量核查点</span></div>
+        </div>
+      </div>
+
+      <div class="chapter-card">
+        <div class="chapter-title">第十三章：初始化执行指令</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">13.1</span>游戏启动标准流程</span></div>
+        </div>
+      </div>
+
+      <!-- Appendix -->
+      <div class="chapter-card" style="border-color: #b84a4a;">
+        <div class="chapter-title" style="color: #b84a4a; border-left-color: #d4a373;">附录：核心规则速查</div>
+        <div class="section-list">
+          <div class="section-item"><span><span class="section-num">A.1</span>核心规则汇总表</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      ❦ 欲望的索引 · 权力的框架 ❦
+    </div>
+  </div>
+</body>
+</html>

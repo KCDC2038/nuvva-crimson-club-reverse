@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: #1a0f0f;
+      color: #f0e6d8;
+      font-family: 'Noto Serif SC', 'Songti SC', serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 30px;
+      background: linear-gradient(to bottom, #1a0f0f, #2a1a1a 10%, #1a0f0f);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+      border-bottom: 1px solid rgba(212, 163, 115, 0.3);
+      padding-bottom: 30px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      letter-spacing: 8px;
+      font-size: 32px;
+      text-shadow: 0 0 15px rgba(212, 163, 115, 0.2);
+    }
+    .part-title {
+      font-family: 'Playfair Display', serif;
+      color: #d4a373;
+      font-size: 22px;
+      text-align: center;
+      margin: 60px 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+    .part-title::before, .part-title::after {
+      content: '';
+      height: 1px;
+      width: 60px;
+      background: linear-gradient(90deg, transparent, #d4a373, transparent);
+    }
+    .content-line {
+      display: block;
+      text-align: left;
+      padding: 4px 20px;
+      font-size: 14px;
+      color: #e0d0b8;
+      font-family: 'Cormorant Garamond', 'Noto Serif SC', serif;
+      word-break: break-all;
+      white-space: pre-wrap;
+    }
+    .ornament {
+      display: block;
+      text-align: center;
+      color: #b84a4a;
+      font-size: 11px;
+      margin: 8px 0;
+      letter-spacing: 5px;
+      opacity: 0.6;
+      font-style: italic;
+      user-select: none;
+    }
+    .code-line {
+      color: #b8a88a;
+      font-family: 'Consolas', 'Monaco', monospace;
+      background: rgba(0,0,0,0.1);
+    }
+    .footer-nav {
+      text-align: center;
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px dashed rgba(212, 163, 115, 0.2);
+    }
+    .nav-btn {
+      padding: 12px 30px;
+      background: transparent;
+      border: 1px solid #d4a373;
+      color: #d4a373;
+      font-family: 'Playfair Display', serif;
+      cursor: pointer;
+      letter-spacing: 2px;
+      transition: all 0.3s;
+    }
+    .nav-btn:hover {
+      background: #d4a373;
+      color: #1a0f0f;
+      box-shadow: 0 0 20px rgba(212, 163, 115, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>《绯红会所》排版游戏 · 卷四</h1>
+      <p style="color: #b8a88a; font-size: 13px; letter-spacing: 2px;">系统与交互规范：菜单、适配与HTML架构</p>
+    </div>
+
+    <!-- 第十四部分 -->
+    <div class="part-title">第十四部分：快捷菜单（≡）</div>
+    
+    <div class="content-line">点击导航栏最右侧「≡」展开右侧抽屉：</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">// css</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">.side-drawer {</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  position: fixed;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  top: 0; right: -270px;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  width: 250px;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  height: 100%;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  background: rgba(26, 15, 15, 0.98);</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  border-left: 1px solid rgba(212, 163, 115, 0.2);</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  z-index: 200;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  padding: 70px 16px 20px;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  backdrop-filter: blur(14px);</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  overflow-y: auto;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  box-shadow: -5px 0 25px rgba(0,0,0,0.4);</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">}</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">.side-drawer.show {</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  right: 0;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">}</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">菜单项目：</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 女王档案</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 客人档案</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 道具库</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 会所地图</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 委托任务</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• ── 分割 ──</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 调教记录</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 身体开发</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 收藏夹</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• ── 分割 ──</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 游戏设置（文字速度 / 动效强度 / 主题色）</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 存档 / 读档</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">• 关于</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+
+    <!-- 第十五部分 -->
+    <div class="part-title">第十五部分：响应式适配</div>
+    
+    <div class="content-line code-line">// css</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">@media (max-width: 768px) {</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  .story-area {</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">    padding: 70px 16px 150px;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">    font-size: 14px;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">    line-height: 1.9;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  }</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  .option-grid {</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">    flex-direction: column;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  }</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  .option-btn, .custom-option {</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">    min-width: 100%;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  }</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">}</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">@media (max-width: 480px) {</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  .toy-grid {</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">    grid-template-columns: repeat(3, 1fr);</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  }</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">}</div>
+
+    <!-- 第十六部分 -->
+    <div class="part-title">第十六部分：运行说明与HTML结构参考</div>
+    
+    <div class="content-line">页面结构总览</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">整个游戏为单页应用（SPA），所有界面通过 CSS 类切换，无刷新无跳转。</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">// html</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">&lt;!DOCTYPE html&gt;</div>
+    <div class="ornament">◆ 玫瑰点��� ◆</div>
+    <div class="content-line code-line">&lt;html lang="zh-CN"&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">&lt;body&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  &lt;!-- 开机动画 --&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  &lt;div id="splashScreen" class="splash-screen screen active"&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  &lt;!-- 封面页 --&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  &lt;div id="coverPage" class="cover-page screen"&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  &lt;!-- 角色创建页 --&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  &lt;div id="createPage" class="char-create screen"&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  &lt;!-- 主游戏界面 --&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line code-line">  &lt;div id="gamePage" class="screen"&gt;</div>
+    <div class="ornament">◆ 玫���点缀 ◆</div>
+    <div class="content-line code-line">&lt;/body&gt;</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">核心流程</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">1. 打开页面 → 开机动画（光晕→城市→会所大门→化妆间→标题→进入按钮）</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">2. 点击「踏入回廊」→ 开屏层右上滑出 + 封面页左下放大浮现（丝滑过渡）</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">3. 点击封面按钮 → 封面向上淡出 → 角色创建页从下方浮入（单页大表单，一次性填完）</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">4. 点击「确认登场」→ 创建页右下渐隐 → 游戏页左上放大浮现 → 第一幕剧情开始</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">5. 游戏全程在主界面进行，功能为弹窗叠加</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">6. 每段剧情 400 字以上（重要场景 800+），逐段浮现</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+    <div class="content-line">7. 底部 ABCD 常驻，D 支持回车快捷发送</div>
+    <div class="ornament">◆ 玫瑰点缀 ◆</div>
+
+    <div class="footer-nav">
+      <button class="nav-btn" onclick="window.te('排版游戏圆满结束')">确认完成</button>
+    </div>
+  </div>
+</body>
+</html>

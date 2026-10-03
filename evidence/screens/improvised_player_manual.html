@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@400;700&family=Noto+Serif+SC:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: #1a0f0f;
+      color: #f0e6d8;
+      font-family: 'Noto Serif SC', 'Songti SC', serif;
+      margin: 0; padding: 20px;
+      line-height: 1.6;
+    }
+    .manual-container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(61, 36, 36, 0.95);
+      border: 1px solid rgba(212, 163, 115, 0.3);
+      border-radius: 16px;
+      padding: 40px 25px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .manual-container::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, transparent, #d4a373, transparent);
+    }
+    header {
+      text-align: center; margin-bottom: 40px;
+    }
+    .title-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px; color: #d4a373; letter-spacing: 8px; margin: 0;
+      text-shadow: 0 0 20px rgba(212,163,115,0.4);
+    }
+    .title-sub {
+      font-family: 'Dancing Script', cursive; font-size: 20px; color: #b8a88a; margin-top: 5px;
+    }
+    
+    .section {
+      margin-bottom: 30px; border-bottom: 1px solid rgba(212, 163, 115, 0.15); padding-bottom: 20px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif; font-size: 22px; color: #e8c99b;
+      display: flex; align-items: center; gap: 15px; margin-bottom: 20px;
+    }
+    .section-title i { font-style: normal; font-size: 24px; }
+
+    .content-block {
+      background: rgba(26, 15, 15, 0.5); border-radius: 10px; padding: 15px; margin-bottom: 15px;
+    }
+    .content-block h4 {
+      color: #d4a373; margin-top: 0; margin-bottom: 10px; font-size: 16px; display: flex; align-items: center; gap: 8px;
+    }
+    
+    .grid-2 {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 15px;
+    }
+    
+    .stat-formula {
+      font-family: 'Cormorant Garamond', serif; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 6px;
+      color: #d46a6a; font-size: 14px; border-left: 3px solid #8b3a3a; margin: 10px 0;
+    }
+
+    ul { padding-left: 20px; margin: 5px 0; }
+    li { margin-bottom: 6px; font-size: 14px; color: #e0d0b8; }
+    b { color: #d4a373; font-weight: normal; }
+
+    .map-tag { background: rgba(184, 74, 74, 0.15); color: #d46a6a; padding: 2px 6px; border-radius: 4px; font-size: 11px; margin-right: 5px; }
+    
+    .footer-msg {
+      text-align: center; font-style: italic; color: #8b7a68; font-size: 12px; margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="manual-container">
+    <header>
+      <h1 class="title-main">女王手册</h1>
+      <div class="title-sub">The Lust Gallery Player Manual</div>
+    </header>
+
+    <!-- 1. 世界观与地图 -->
+    <div class="section">
+      <div class="section-title"><i>Ⅰ</i> 世界观与领地</div>
+      <div class="content-block">
+        <p>现代都市深处的禁忌圣殿。在这里，契约高于法律，欲望即是通行证。</p>
+        <div class="grid-2">
+          <div>
+            <b>3F: 顶点</b><br>
+            <span class="map-tag">VIP套房</span> <span class="map-tag">女王套房</span>
+          </div>
+          <div>
+            <b>2F: 极乐</b><br>
+            <span class="map-tag">主题房</span> <span class="map-tag">多人房</span>
+          </div>
+          <div>
+            <b>1F: 社交</b><br>
+            <span class="map-tag">大堂酒廊</span> <span class="map-tag">开放淋浴</span>
+          </div>
+          <div>
+            <b>B1: 后勤</b><br>
+            <span class="map-tag">道具库</span> <span class="map-tag">医疗室</span>
+          </div>
+          <div style="grid-column: span 2;">
+            <b>B2: 深渊</b><br>
+            <span class="map-tag">惩罚室</span> <span class="map-tag">深喉开发</span> <span class="map-tag">行刑台</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. 建档与阶段 -->
+    <div class="section">
+      <div class="section-title"><i>Ⅱ</i> 流程与阶段</div>
+      <div class="grid-2">
+        <div class="content-block">
+          <h4>角色建档</h4>
+          <ul>
+            <li><b>女王名号:</b> 你的权力代号</li>
+            <li><b>倾向设定:</b> 决定剧情分歧点</li>
+            <li><b>敏感点:</b> 决定被反支配时的弱点</li>
+          </ul>
+        </div>
+        <div class="content-block">
+          <h4>时间阶段</h4>
+          <ul>
+            <li><b>傍晚:</b> 准备、低级委托</li>
+            <li><b>黄金:</b> 高潮、精英汇聚</li>
+            <li><b>深夜:</b> 堕落、重口/私密场景</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. 数值体系 -->
+    <div class="section">
+      <div class="section-title"><i>Ⅲ</i> 数值逻辑</div>
+      <div class="content-block">
+        <h4>玩家数值</h4>
+        <ul>
+          <li><b>声望(RP):</b> 决定权限与解锁。</li>
+          <li><b>体力(STA):</b> 调教消耗，归零将进入虚弱/易受支配状态。</li>
+          <li><b>兴奋度(EXC):</b> 决定你的欲望状态。</li>
+        </ul>
+        <div class="stat-formula">
+          调教成功率 = (玩家RP/1000 + 道具加成 + 心理压制) - NPC服从门槛
+        </div>
+      </div>
+      <div class="content-block">
+        <h4>NPC三大数值</h4>
+        <ul>
+          <li><b>好感度(Favor):</b> 决定对话深度与主动服务的意愿。</li>
+          <li><b>服从度(Obedience):</b> 越高，对重口/羞辱动作的反抗越小。</li>
+          <li><b>开发度(Dev):</b> 反映NPC身体对刺激的耐受与反应。</li>
+        </ul>
+        <div class="stat-formula">
+          状态阈值: 80+ 进入[极度痴迷/完全驯服]，15- 触发[激烈反抗]
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. 委托与结算 -->
+    <div class="section">
+      <div class="section-title"><i>Ⅳ</i> 委托与结算</div>
+      <div class="content-block">
+        <p><b>S级:</b> 顶级权贵，需精细调教，高RP奖励。</p>
+        <p><b>A/B级:</b> 会所常客，标准调教，稳定收益。</p>
+        <p><b>C级:</b> 试炼客，消耗品。</p>
+        <div class="stat-formula">
+          结算奖励 = 基础RP * (1 + 场景加成15%) * (1 + 高潮达成20%)
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. 交互规范 -->
+    <div class="section">
+      <div class="section-title"><i>Ⅴ</i> 交互与协议</div>
+      <div class="content-block">
+        <h4>界面三段式</h4>
+        <ul>
+          <li><b>顶部:</b> 状态与档案实时监控</li>
+          <li><b>中部:</b> 沉浸式感官叙事 (五感俱全)</li>
+          <li><b>底部:</b> ABCD动态决策选项</li>
+        </ul>
+      </div>
+      <div class="content-block">
+        <h4>安全词协议</h4>
+        <p><b>Red:</b> 绝对停止。 <b>Yellow:</b> 降低强度。 <b>Green:</b> 尽情蹂躏。</p>
+        <p style="font-size: 11px; color:#8b3a3a;">※ 注意：女王若在反支配中崩溃，也将被迫执行协议。</p>
+      </div>
+    </div>
+
+    <div class="footer-msg">
+      “在这里，唯一的限制是你的想象力。”
+    </div>
+  </div>
+</body>
+</html>
